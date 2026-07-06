@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Market4u</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.card{
+
+    width:95%;
+    max-width:420px;
+
+    background:white;
+    border-radius:20px;
+    padding:35px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+    text-align:center;
+}
+
+.logo{
+    width:220px;
+    margin-bottom:25px;
+}
+
+h2{
+    color:#333;
+    margin-bottom:30px;
+}
+
+.btn{
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+width:100%;
+padding:17px;
+
+margin-bottom:15px;
+
+border-radius:12px;
+
+text-decoration:none;
+
+font-size:18px;
+
+font-weight:bold;
+
+transition:.2s;
+}
+
+.btn:hover{
+
+transform:translateY(-2px);
+
+}
+
+.whats{
+background:#25D366;
+color:white;
+}
+
+.grupo{
+background:#4CAF50;
+color:white;
+}
+
+.pix{
+background:#76B82A;
+color:white;
+cursor:pointer;
+border:none;
+}
+
+.msg{
+
+margin-top:15px;
+
+color:#2E7D32;
+
+font-weight:bold;
+
+display:none;
+
+}
+
+footer{
+
+margin-top:30px;
+
+font-size:13px;
+
+color:#999;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<img src="logo.png" class="logo">
+
+<h2>Como podemos ajudar?</h2>
+
+<a class="btn whats"
+href="https://wa.me/5511926322503"
+target="_blank">
+
+💬 WhatsApp
+
+</a>
+
+<a class="btn grupo"
+href="https://chat.whatsapp.com/DJTt49VjxekFfBYiXbVPlV"
+target="_blank">
+
+🎁 Grupo de Promoções
+
+</a>
+
+<button class="btn pix" onclick="copiarPix()">
+
+💳 Copiar Chave PIX
+
+</button>
+
+<div class="msg" id="msg">
+
+✅ Chave PIX copiada!
+
+</div>
+
+<footer>
+
+Obrigado pela preferência ❤️
+
+</footer>
+
+</div>
+
+<script>
+
+function copiarPix(){
+
+const chave="7cd250a1-330b-46e2-8a02-785b8de57355";
+
+navigator.clipboard.writeText(chave);
+
+document.getElementById("msg").style.display="block";
+
+setTimeout(function(){
+
+document.getElementById("msg").style.display="none";
+
+},2500);
+
+}
+
+</script>
+
+</body>
+</html>
